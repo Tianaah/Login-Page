@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="/components/buttons.css" />
+<link rel="stylesheet" href="/modules/signup.css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="container">
+  <!-- Header -->
+  <div class="card-header">
+    <div class="logo-wrapper">
+      <div class="taskmaster-logo">
+        <img src="/Assets/icons/check icon.svg" alt="taskmaster-logo">
+        <span class="logo-dot"></span>
+      </div>
+    </div>
+    <!-- Heading-texts -->
+    <div>
+      <h1 id="card-heading">Join TaskMaster</h1>
+      <p class="subtitle" id="card-subtitle">
+        Create an account to boost your productivity
+      </p>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="tab-buttons">
+    <button id="loginTab" class="active">Login</button>
+    <button id="signupTab">Sign Up</button>
+  </div>
+
+  <!-- Signup Form -->
+  <form id="signupForm" class="form">
+    <div class="input_one">
+      <label for="fullname" class="label" id="full_name">Full Name*</label>
+      <div class="user_details">
+        <span class="user-icon">
+        <img src="/Assets/icons/User icon.svg"/>
+        </span>
+        <input id="fullname" type="text" placeholder="John Doe" required />
+      </div>
+    </div>
+
+    <div class="input_two">
+      <label for="email" class="email" id="user_email">Email*</label>
+      <div class="user_details">
+        <span class="user-icon"
+          ><img src="/Assets/icons/email icon.svg"/></span>
+        <input id="email" type="email" placeholder="hello@example.com" required />
+      </div>
+    </div>
+
+    <div class="input_three">
+      <label for="password" id="pass" class="label">password*</label>
+      <div class="user_details">
+        <span class="user-icon"
+          ><img src="/Assets/icons/email icon.svg"/>
+        </span>
+        <input id="password" type="password" placeholder="......" required />
+      </div>
+      <span id="note">password must be at least 6 characters long</span>
+    </div>
+
+    <div id="sectionBtn" class="button-container"></div>
+     
+      <!-- Footer -->
+      <footer>
+        By continuing, you agree to our
+        <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
+        <br /><br />
+        © 2024 TaskMaster | Made for University Students
+      </footer>
+
+
+    </div>
+  </form>
+</div>
+
+ <script src="/modules/signup.js"></script>

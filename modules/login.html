@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/components/buttons.css" />
+<link rel="stylesheet" href="/modules/login.css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="container">
+  <!-- Header -->
+  <div class="card-header">
+    <div class="logo-wrapper">
+      <div class="taskmaster-logo">
+        <img src="/Assets/icons/check icon.svg" alt="taskmaster-logo">
+        <span class="logo-dot"></span>
+      </div>
+    </div>
+    <!-- Heading-texts -->
+    <div>
+      <h1 id="card-heading">Welcome Back!</h1>
+      <p class="subtitle" id="card-subtitle">
+        Enter your details to access your account
+      </p>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="tab-buttons">
+    <button id="loginTab" class="active">Login</button>
+    <button id="signupTab">Sign Up</button>
+  </div>
+
+  <!-- Login Form -->
+  <form id="signupForm" class="form">
+    <div class="input_two">
+      <label for="email" class="email" id="user_email">Email Address*</label>
+      <div class="user_details">
+        <span class="user-icon"
+          ><img src="/Assets/icons/email icon.svg"/></span>
+        <input id="email" type="email" placeholder="hello@example.com" required />
+      </div>
+    </div>
+
+    <div class="input_three">
+      <label for="password" id="pass" class="label">password*</label>
+      <div class="user_details">
+        <span class="user-icon"
+          ><img src="/Assets/icons/email icon.svg"/>
+        </span>
+        <input id="password" type="password" placeholder="......" required />
+      </div>
+      
+    </div>
+
+    <div data-import="./components/buttons.html"></div>
+     
+      <!-- Footer -->
+      <footer>
+        By continuing, you agree to our
+        <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>
+        <br /><br />
+        © 2024 TaskMaster | Made for University Students
+      </footer>
+
+      
+    </div>
+  </form>
+</div>

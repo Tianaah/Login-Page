@@ -1,17 +1,16 @@
 /* ---------- Background ---------- */
+/* ---------- Background ---------- */
 body {
   font-family: "Inter", sans-serif;
   background: #f5f7fb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  min-height: 100%; /* allow body to grow */
   position: relative;
-  overflow: hidden;
-  padding: 20px;
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
-.bg-shape {
+* Position background shapes absolutely so they stay in place */ .bg-shape {
   position: absolute;
   width: 260px;
   height: 260px;
@@ -21,44 +20,47 @@ body {
 }
 
 .shape1 {
-  background: #8ab4ff;
   top: -80px;
   left: -80px;
+  background: #8ab4ff;
 }
-
 .shape2 {
-  background: #ffd27f;
   bottom: -90px;
   right: -100px;
+  background: #ffd27f;
 }
-
 .shape3 {
-  background: #8df;
   bottom: 50%;
   left: 70%;
+  background: #8df;
 }
 
-/* ---------- Login Card ---------- */
-.login-card {
-  background: #fff;
-  width: 420px;
-  padding: 35px 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
-  position: relative;
-  z-index: 2;
-  text-align: center;
+/* ---------- Card ---------- */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 28rem;
+  margin: 2rem auto; /* allow space for scrolling */
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  padding: 1rem 1.5rem 2rem;
+  z-index: 10;
+}
+
+p {
+  font-size: 16px;
+  margin-top: 0.5rem;
+  color: #4b5563;
 }
 
 h1 {
-  font-size: 28px;
-  margin: 10px 0 5px;
+  font-size: 1.875rem;
   font-weight: 700;
-}
-
-.subtitle {
-  color: #6b7280;
-  margin-bottom: 25px;
+  color: #111827;
 }
 
 /* ---------- Logo ---------- */
@@ -80,11 +82,6 @@ h1 {
   box-shadow: 0 10px 20px rgba(56, 130, 255, 0.25);
 }
 
-.taskmaster-logo svg {
-  width: 42px;
-  height: 42px;
-}
-
 .logo-dot {
   width: 16px;
   height: 16px;
@@ -98,10 +95,17 @@ h1 {
 
 /* ---------- Tabs ---------- */
 .tab-buttons {
-  display: flex;
+  color: #6b7280;
+  height: 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   justify-content: center;
-  margin-bottom: 25px;
-  gap: 10px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  background-color: #f3f4f6;
+  padding: 0.25rem;
+  border-radius: 0.75rem;
 }
 
 .tab-buttons button {
@@ -120,9 +124,22 @@ h1 {
   color: #4f46e5;
 }
 
-/* ---------- Form ---------- */
+/* ---------- Forms with animation ---------- */
 .form {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.form.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
 .form label {
@@ -146,7 +163,25 @@ h1 {
   background: #fff;
 }
 
-/* ---------- Bottom Buttons ---------- */
+/* Input icon container */
+.input-icon {
+  position: relative;
+}
+
+.input-icon input {
+  padding-left: 2.5rem;
+}
+
+.input-icon img {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- Buttons ---------- */
 .button-row {
   display: flex;
   justify-content: space-between;
@@ -155,25 +190,24 @@ h1 {
 
 .help-btn,
 .submit-btn {
-  width: 48%;
-  padding: 14px;
-  border-radius: 14px;
-  font-size: 15px;
-  cursor: pointer;
-  font-weight: 600;
-  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  outline: none;
+  padding: 0.5rem 1rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  border: 2px solid #e5e7eb;
+  gap: 0.5rem;
+  flex: 1;
 }
 
 .help-btn {
   background: #f3f4f6;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
-}
-
-.help-icon {
-  width: 18px;
 }
 
 .submit-btn {
@@ -181,11 +215,22 @@ h1 {
   color: #000;
 }
 
+.submit-btn:hover {
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+.submit-btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 /* ---------- Footer ---------- */
 footer {
   margin-top: 25px;
   font-size: 12px;
   color: #6b7280;
+  text-align: center;
 }
 
 footer a {
