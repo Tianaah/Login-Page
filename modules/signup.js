@@ -3,7 +3,6 @@ import buttonHTML from "../components/buttons/button.html" assert { type: "text"
 
 const formContainer = document.getElementById("formContainer");
 
-// Example signup fields
 const signupFields = [
   {
     id: "fullname",
@@ -32,7 +31,7 @@ const signupFields = [
 ];
 
 function renderForm(fields) {
-  formContainer.innerHTML = ""; // Clear existing form
+  formContainer.innerHTML = "";
 
   fields.forEach((f) => {
     const inputHTML = signupFormHTML
@@ -46,16 +45,13 @@ function renderForm(fields) {
     formContainer.insertAdjacentHTML("beforeend", inputHTML);
   });
 
-  // Add buttons
   formContainer.insertAdjacentHTML("beforeend", buttonHTML);
 }
 
-// Initialize signup form
 renderForm(signupFields);
 
-// Tab switching
 document.getElementById("loginTab").addEventListener("click", () => {
-  formContainer.innerHTML = ""; // Switch to login handled by login.js
+  formContainer.innerHTML = "";
 });
 
 document.getElementById("signupTab").addEventListener("click", () => {
