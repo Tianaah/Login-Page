@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">TaskMaster</div>
+
+        <div class="user-box">
+          <div class="avatar">T</div>
+          <div class="user-info">
+            <h4>Tony Crystal</h4>
+            <small>crystallovesmaltesers@gmail.com</small>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <button class="active">Dashboard</button>
+          <button>Tasks</button>
+          <button>Community</button>
+          <button>Expenses</button>
+          <button>Notes</button>
+          <button>Settings</button>
+        </nav>
+
+        <button class="logout-btn">Logout</button>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Header -->
+        <header class="page-header">
+          <h1>Good evening, Tony Crystal!</h1>
+          <p>Here's what's happening with your productivity today</p>
+        </header>
+
+        <!-- Stats Cards -->
+        <section class="stats-grid">
+          <div class="stats-card">
+            <h3>Active Tasks</h3>
+            <p class="number">0</p>
+            <span>0 completed</span>
+          </div>
+
+          <div class="stats-card">
+            <h3>Total Expenses</h3>
+            <p class="number">$0.00</p>
+            <span>This period</span>
+          </div>
+
+          <div class="stats-card">
+            <h3>Total Notes</h3>
+            <p class="number">0</p>
+            <span>Saved notes</span>
+          </div>
+
+          <div class="stats-card">
+            <h3>Completion Rate</h3>
+            <p class="number">0%</p>
+            <span>Task completion</span>
+          </div>
+        </section>
+
+        <!-- Two Columns -->
+        <section class="two-col">
+          <!-- Recent Tasks -->
+          <div class="panel">
+            <h2>Recent Tasks</h2>
+            <div class="empty-box">No tasks yet</div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="panel">
+            <h2>Quick Actions</h2>
+
+            <div class="action-card">Create New Task</div>
+            <div class="action-card">Track Expense</div>
+            <div class="action-card">Write Note</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

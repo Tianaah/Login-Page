@@ -1,0 +1,61 @@
+/* HEADER CONTAINER */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* LOGO WRAPPER */
+.task-logo {
+  width: 4rem;
+  height: 4rem;
+  background-color: blue;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 0.5rem; /* EXACT space to h4 */
+}
+
+/* LOGO IMAGE (only this one) */
+.task-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* white icon */
+}
+
+/* TITLE (H4) */
+.header-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  margin-bottom: 8px; /* EXACT space to subtitle */
+}
+
+/* SUBTITLE (P) */
+.header-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* BOLT ICON DECORATION */
+.bolt {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #facc15;
+  border-radius: 9999px;
+  border: 4px solid #ffffff;
+}

@@ -1,0 +1,37 @@
+<script>
+  window.pageType = "login";
+</script>
+
+<link rel="stylesheet" href="/components/header/header.css" />
+<link rel="stylesheet" href="/components/input/input.css" />
+<link rel="stylesheet" href="/components/button/button.css" />
+<link rel="stylesheet" href="/modules/login/login.css" />
+
+<div class="login-card">
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- FIRST WRAPPER: Tabs -->
+  <div class="tabs-buttons">
+    <button class="tab active" data-tab="login">Login</button>
+    <button class="tab" data-tab="signup">Sign Up</button>
+  </div>
+
+  <!-- SECOND WRAPPER: Form + Footer -->
+  <div class="content-wrapper">
+    <!-- LABELS + INPUTS -->
+    <div id="form-container"></div>
+
+    <!-- FOOTER -->
+    <p class="login-footer">
+      By continuing, you agree to our
+      <a href="#">Terms of service</a> &
+      <a href="#">Privacy policy</a>
+      <br /><br />
+      © 2024 TaskMaster | Made for University Students
+    </p>
+  </div>
+</div>
+
+<script type="module" src="/modules/login/login.js" defer></script>
+<script type="module" src="/components/header/header.js" defer></script>

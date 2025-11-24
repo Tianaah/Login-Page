@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>TaskMaster</title>
-
-    <!-- Global Styles -->
-    <link rel="stylesheet" href="index.css" />
-
-    <!-- Component CSS -->
-    <link rel="stylesheet" href="components/card/card.css" />
-    <link rel="stylesheet" href="components/buttons/button.css" />
-    <link rel="stylesheet" href="components/input/input.css" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="/assets/css/global.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <script>
+      window.pageType = "login";
+    </script>
+    <script type="module" src="/components/header/header.js" defer></script>
+    <script type="module" src="/modules/login/login.js" defer></script>
+    <script type="module" src="/modules/signup/signup.js" defer></script>
+    <script type="module" src="/components/input/input.js" defer></script>
+    <script type="module" src="/components/button/button.js" defer></script>
 
-    <!-- Page Modules -->
-    <script src="modules/signup.js" defer></script>
-    <script src="modules/login.js" defer></script>
+    <link rel="stylesheet" href="/components/header/header.css" />
+    <link rel="stylesheet" href="/components/input/input.css" />
+    <link rel="stylesheet" href="/components/button/button.css" />
+    <link rel="stylesheet" href="/modules/login/login.css" />
+    <link rel="stylesheet" href="/modules/signup/signup.css" />
+
+    <div id="app-root"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("/modules/login/login.html")
+          .then((r) => r.text())
+          .then((html) => {
+            document.getElementById("app-root").innerHTML = html;
+            const s = document.createElement("script");
+            s.type = "module";
+            s.src = "/modules/login/login.js";
+            document.body.appendChild(s);
+          });
+      });
+    </script>
   </body>
 </html>

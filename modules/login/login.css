@@ -1,0 +1,104 @@
+/* Center page content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f3f4f6;
+}
+
+/* The card container */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER SPACING */
+#header-placeholder {
+  margin-bottom: 24px; /* EXACT spacing to tabs */
+  text-align: center;
+}
+
+/* ---------- Tabs Container ---------- */
+.tabs-buttons {
+  position: static;
+  z-index: auto;
+  display: grid;
+  visibility: visible;
+  grid-template-columns: 196px 196px;
+  grid-template-rows: 30px;
+  grid-gap: normal;
+  border-radius: 12px;
+  background-color: oklch(0.967 0.003 264.542);
+}
+
+/* Tabs container */
+.tabs-buttons {
+  width: 100%;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 1.5rem;
+  height: 2.25rem;
+}
+
+/* Buttons */
+.tabs-buttons button {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  height: 100%;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280; /* gray-600 */
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Active tab */
+.tabs-buttons button.active {
+  background: #ffffff;
+  /* color: #111827; gray-900 */
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Disabled */
+.tabs-buttons button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* CONTENT WRAPPER (Inputs + footer) */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Form container */
+#form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Footer text */
+.login-footer {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.4;
+}

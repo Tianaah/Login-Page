@@ -1,0 +1,63 @@
+/* .input-group label {
+  font-size: 1.4rem;
+
+  font-weight: 200;
+} */
+
+label {
+  display: flex; /* flex */
+  align-items: center; /* items-center */
+  gap: 0.5rem; /* gap-2 */
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem; /* leading-none-ish */
+  user-select: none; /* select-none */
+  color: #374151; /* text-gray-700 */
+  font-weight: 500; /* font-medium */
+}
+
+.pass-hint {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 4px;
+  display: block;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+/* Base input style */
+.input-group input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 2.875rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Email icon */
+.input-email {
+  background-image: url("/assets/icons/email\ icon.svg");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  background-position: 0.875rem center;
+}
+
+/* Password icon */
+.input-password {
+  background-image: url("/assets/icons/lock\ icon.svg");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  background-position: 0.875rem center;
+}
+
+/* Name icon */
+.input-name {
+  background-image: url("/assets/icons/User\ icon.svg");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  background-position: 0.875rem center;
+}

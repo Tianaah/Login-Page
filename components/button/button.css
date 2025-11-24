@@ -1,0 +1,80 @@
+button {
+  padding: 10px;
+}
+/* Base button styles */
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+/* Layout for both buttons */
+.login-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Base button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Disabled state */
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* SVG inside buttons */
+.btn svg {
+  pointer-events: none;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/*  Primary */
+.btn-primary {
+  background: linear-gradient(to right, #facc15, #eab308);
+  color: #111827;
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+}
+
+/* Hover for Primary */
+.btn-primary:hover {
+  background: linear-gradient(to right, #eab308, #ca8a04);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+/*  button icon  */
+.btn:has(> svg) {
+  padding-left: 0.75rem;
+}
